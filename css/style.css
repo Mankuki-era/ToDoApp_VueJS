@@ -1,0 +1,135 @@
+body {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #e0ffff;
+}
+
+.container {
+  width: 700px;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: #afeeee;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.formContent {
+  height: 80px;
+  margin: 20px auto; 
+  text-align: center;
+  line-height: 80px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+#app input[type="text"] {
+  padding: 6px;
+}
+
+.addContent {
+  width: 600px;
+  margin: 6px auto;
+  background: #fff;
+}
+
+.addContent .subContent {
+  background: #afeeee;
+}
+
+.subContent .info {
+  color: #333;
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  background: #fff;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: 1px solid #8dd6d6;
+  border-radius: 20px;
+}
+
+.subContent .btn {
+  padding: 10px 0;
+}
+
+.subContent button {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+.addContent nav {
+  background: #eee;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.addContent ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.addContent ul li, nav {
+  line-height: 40px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+
+.addContent .check{
+  width: 70px;
+}
+
+.addContent .text {
+  flex: 1;
+  border-right: 2px solid #afeeee;
+  border-left: 2px solid #afeeee;
+}
+
+.addContent .time {
+  border-right: 2px solid #afeeee;
+  width: 200px;
+}
+
+.addContent .purge {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addContent nav > .purge {
+  width: 90.8px;
+}
+
+.command {
+  width: 50px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #08c;
+}
+
+.addContent ul li.message {
+  display: block;
+}
+
+.addContent li div.done {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+
+
+

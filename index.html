@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo_VueJS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="app" class="container">
+    <h1>タスク管理アプリ</h1>
+    <form @submit.prevent="addItem" class="formContent">
+      <input type="text" v-model="newItem">
+      <input type="submit" value="追加">
+    </form>  
+    <div class="addContent">
+      <div class="subContent">
+        <span class="info">総タスク数: {{todos.length}}<br>未完了数: {{remaining.length}} </span>
+        <div class="btn">
+          <button @click="purge">一括削除</button>
+        </div>
+      </div>
+      <nav>
+        <div class="check">チェック</div>
+        <div class="text">タスク</div>
+        <div class="time">追加時刻</div>
+        <div class="purge">削除</div>
+      </nav>
+      <ul>
+        <li v-for="(todo, index) in todos">
+          <div class="check">
+            <input type="checkbox" v-model="todo.isDone" >
+          </div>
+          <div :class="{done: todo.isDone}" class="text">{{ todo.title }}</div>
+          <div :class="{done: todo.isDone}" class="time">{{ todo.time }}</div>
+          <div class="purge">
+            <input type="submit" value="削除" @click="deleteItem(index)" class="command">
+          </div>
+        </li>
+        <li v-show="todos && !todos.length" class="message">タスクを追加してみましょう</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
